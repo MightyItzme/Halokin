@@ -42,7 +42,7 @@ function colourRandom() {
 }
 
 
-await s4d.client.login('OTA1NTAzMzg0MDUwNzM3MjMy.YYLBvg.AXJ6c66Ln6jZDD4dBWfgDyvhxZQ').catch((e) => { s4d.tokenInvalid = true; s4d.tokenError = e; });
+await s4d.client.login(process.env.token).catch((e) => { s4d.tokenInvalid = true; s4d.tokenError = e; });
 
 s4d.client.on('ready', async () => {
   s4d.client.user.setPresence({status: "online",activities:[{name:'!!help',type:"COMPETING"}]});
